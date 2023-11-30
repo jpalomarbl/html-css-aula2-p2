@@ -35,7 +35,7 @@ textarea {
 header {
   margin-top: 20px;
   background-color: rgba(7, 14, 88, 0.7);
-  font-size: 25px;
+  font-size: 1.7rem;
 }
 
 header > ul {
@@ -59,7 +59,10 @@ a {
 
 header a,
 footer a {
-  border-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
   border-style: solid;
   border-color: #fff;
 }
@@ -69,6 +72,7 @@ header a:focus,
 footer a:hover,
 footer a:hover {
   color: #a4f479;
+  border-color: #a4f479;
 }
 
 /* Content index.html */
@@ -82,7 +86,8 @@ div.container > img {
 }
 
 div.container > h1 {
-  font-size: 90px;
+  font-size: 6rem;
+  font-weight: 900;
 }
 
 /* Footer */
@@ -100,7 +105,7 @@ footer > ul {
   padding: 0;
   margin: 20px 0;
 
-  font-size: 23px;
+  font-size: 1.5rem;
 }
 
 footer > ul > li {
@@ -108,5 +113,6 @@ footer > ul > li {
 }
 
 footer > p {
+  font-size: 1.1rem;
   text-align: center;
 }
