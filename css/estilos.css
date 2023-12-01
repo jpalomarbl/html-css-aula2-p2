@@ -5,14 +5,17 @@
 }
 
 body {
-  background-image: url("/img/home-hero.jpg");
-  background-size: cover;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Fira Sans", sans-serif;
   margin: 0;
+}
+
+.index {
+  background-image: url("/img/home-hero.jpg");
+  background-size: cover;
 }
 
 button,
@@ -33,21 +36,54 @@ textarea {
 /* Header */
 
 header {
-  margin-top: 20px;
-  background-color: rgba(7, 14, 88, 0.7);
-  font-size: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("/img/amped_header.jpg");
+  background-size: cover;
+
+  width: 100vw;
 }
 
-header > ul {
+header.index-header {
+  margin-top: 20px;
+  background-color: rgba(7, 14, 88, 0.7);
+  background-image: none;
+  font-size: 1.7rem;
+
+  width: auto;
+}
+
+header > div.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 20px;
+  background-color: rgba(7, 14, 88, 0.7);
+  font-size: 1.2rem;
+}
+
+header img {
+  margin-top: 10px;
+  width: 200px;
+}
+
+header ul {
   display: flex;
   list-style: none;
   justify-content: center;
   padding: 0;
+  margin: 0 50px 10px;
+}
+
+header.index-header ul {
   margin: 20px 0;
   width: 550px;
 }
 
-header > ul > li {
+header ul > li {
   margin: 10px 15px;
 }
 
@@ -59,60 +95,170 @@ a {
 
 header a,
 footer a {
+  padding-bottom: 5px;
+}
+
+header a:hover:not(.logo),
+header a:focus:not(.logo),
+footer a:hover,
+footer a:hover,
+header a.selected {
+  color: #a4f479;
   border-bottom-width: 1px;
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
   border-style: solid;
-  border-color: #fff;
-}
-
-header a:hover,
-header a:focus,
-footer a:hover,
-footer a:hover {
-  color: #a4f479;
   border-color: #a4f479;
 }
 
 /* Content index.html */
-div.container {
-  margin-top: 100px;
+.index > main {
+  margin: 8vh 8vw 0;
   text-align: center;
 }
 
-div.container > img {
+.index > main > img {
   width: 550px;
 }
 
-div.container > h1 {
+.index > main > h1 {
   font-size: 6rem;
   font-weight: 900;
 }
 
-/* Footer */
+/* Content info.html */
+.info > main {
+  margin-top: 20px;
 
+  color: #070e58;
+}
+
+.info > main > section.info-grupos {
+  margin: 0 25vw;
+}
+
+.info > main > section.info-grupos > h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.3rem;
+}
+
+.info > main > section.cabezas-cartel {
+  margin: 5vh 15vw;
+}
+
+.info > main > section.cabezas-cartel > h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.info > main > section.cabezas-cartel > dl {
+  margin-left: 5%;
+}
+
+.info > main > section.cabezas-cartel > dl > dt {
+  font-size: 1.4rem;
+
+  margin: 20px 0 5px auto;
+}
+
+.info > main > section.cabezas-cartel > dl dd {
+  margin-bottom: 5px;
+
+  line-height: 1.6rem;
+
+  font-weight: 300;
+}
+
+.info > main > section.cabezas-cartel > dl > div {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #5865f2;
+}
+
+.info > main > section.cabezas-cartel dl dd span {
+  font-weight: 700;
+}
+
+.info > main > section.cabezas-cartel p {
+  margin: 2px;
+}
+
+.info > main p {
+  text-align: left;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+.info > main iframe {
+  width: 100%;
+  height: 40vh;
+  margin-top: 20px;
+}
+
+/* Footer */
 footer {
+  display: block;
+  justify-content: left;
+  background-color: #070e58;
+  width: 100vw;
+
+  font-weight: 300;
+}
+
+footer.index-footer {
   margin-top: auto;
   display: block;
   justify-content: center;
+
+  background: none;
+
+  width: auto;
+
+  font-weight: 500;
 }
 
 footer > ul {
   display: flex;
+
   list-style: none;
-  justify-content: center;
+
   padding: 0;
+  margin-top: 30px;
+  margin-left: 15%;
+}
+
+footer.index-footer > ul {
+  justify-content: center;
   margin: 20px 0;
 
   font-size: 1.5rem;
 }
 
 footer > ul > li {
+  margin-right: 20px;
+}
+
+footer.index-footer > ul > li {
   margin: 10px 15px;
 }
 
 footer > p {
+  margin-bottom: 50px;
+  margin-left: 15%;
+  font-size: 0.8rem;
+}
+
+footer.index-footer > p {
+  margin: auto;
   font-size: 1.1rem;
   text-align: center;
+}
+
+@media screen and (min-width: 1840px) {
+  footer.index-footer {
+    background-color: rgba(7, 14, 88, 0.7);
+  }
 }
