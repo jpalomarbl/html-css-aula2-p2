@@ -91,11 +91,23 @@ header ul > li {
 a {
   text-decoration: none;
   color: #fff;
+  padding-bottom: 5px;
 }
 
-header a,
-footer a {
-  padding-bottom: 5px;
+.calendario table a {
+  color: #5865f2;
+
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: #5865f2;
+  padding-bottom: 0;
+}
+
+.calendario table a:hover {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #a4f479;
+  padding-bottom: 0;
 }
 
 header a:hover:not(.logo),
@@ -105,14 +117,11 @@ footer a:hover,
 header a.selected {
   color: #a4f479;
   border-bottom-width: 1px;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-style: solid;
-  border-color: #a4f479;
+  border-bottom-style: solid;
+  border-bottom-color: #a4f479;
 }
 
-/* Content index.html */
+/* CONTENT IN INDEX.HTML */
 .index > main {
   margin: 8vh 8vw 0;
   text-align: center;
@@ -127,25 +136,34 @@ header a.selected {
   font-weight: 900;
 }
 
-/* Content info.html */
-.info > main {
+/* OTHER CONTENT */
+/* Content containers */
+.info > main,
+.calendario > main {
   margin-top: 20px;
 
   color: #070e58;
 }
 
-.info > main > section.info-grupos {
+.info > main > section.info-grupos,
+.calendario > main > section.texto {
   margin: 0 25vw;
-}
-
-.info > main > section.info-grupos > h1 {
-  text-align: center;
-  font-weight: 900;
-  font-size: 2.3rem;
 }
 
 .info > main > section.cabezas-cartel {
   margin: 5vh 15vw;
+}
+
+.calendario > main > section.tabla {
+  margin: 5vh 15vw 10vh 15vw;
+}
+
+/* Text headers */
+.info > main > section.info-grupos > h1,
+.calendario > main > section.texto > h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.3rem;
 }
 
 .info > main > section.cabezas-cartel > h2 {
@@ -154,6 +172,7 @@ header a.selected {
   font-size: 2rem;
 }
 
+/* Lists */
 .info > main > section.cabezas-cartel > dl {
   margin-left: 5%;
 }
@@ -182,20 +201,66 @@ header a.selected {
   font-weight: 700;
 }
 
+/* Text */
 .info > main > section.cabezas-cartel p {
   margin: 2px;
 }
 
-.info > main p {
+.info > main p,
+.calendario > main p,
+.calendario > main table,
+.calendario > main table th:not([scope="col"]) {
   text-align: left;
   font-weight: 300;
   line-height: 1.6rem;
 }
 
+/* Images and videos */
 .info > main iframe {
   width: 100%;
   height: 40vh;
   margin-top: 20px;
+}
+
+/* Tables */
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+}
+
+.calendario > main table tr:nth-child(odd):not(.cabecera, .pie) {
+  background-color: #a4f479;
+}
+
+.calendario > main table > caption {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-color: #5865f2;
+  border-bottom-color: #5865f2;
+  border-top-style: solid;
+  border-bottom-style: solid;
+
+  font-weight: 700;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.calendario > main table th,
+.calendario > main table td {
+  padding: 5px;
+}
+
+.calendario > main table > tfoot {
+  border-bottom-width: 1px;
+  border-bottom-color: #5865f2;
+  border-bottom-style: solid;
+}
+
+.calendario > main table > tfoot > tr > td {
+  padding-top: 10px;
 }
 
 /* Footer */
@@ -257,8 +322,15 @@ footer.index-footer > p {
   text-align: center;
 }
 
+/* Media queries */
 @media screen and (min-width: 1840px) {
   footer.index-footer {
     background-color: rgba(7, 14, 88, 0.7);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  table {
+    font-size: 0.8rem;
   }
 }
