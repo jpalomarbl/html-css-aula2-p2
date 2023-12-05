@@ -233,10 +233,8 @@ main p,
 
 /* Tables */
 table {
-  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 0;
 }
 
 .calendario > main table tr:nth-child(odd):not(.cabecera, .pie) {
@@ -366,6 +364,24 @@ table {
 
   margin: 10px 0;
   padding: 5px;
+}
+
+.tickets input[required]:invalid {
+  border-width: 2px;
+  border-style: solid;
+  border-color:red;
+  border-radius: 3px;
+}
+
+.tickets input[required]:valid {
+  border-width: 2px;
+  border-style: solid;
+  border-color:greenyellow;
+  border-radius: 3px;
+}
+
+.tickets input[required]:placeholder-shown {
+  border: none;
 }
 
 /* Footer */
