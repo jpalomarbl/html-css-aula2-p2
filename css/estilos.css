@@ -282,6 +282,34 @@ table {
   padding: 20px;
 }
 
+.tickets > main form > ul fieldset.peticiones,
+.tickets > main form > ul fieldset.button {
+  background: none;
+
+  padding: 0;
+}
+
+.tickets > main form > ul fieldset.peticiones textarea {
+  width: 100%;
+  margin: 0;
+
+  border: none;
+}
+
+.tickets > main form > ul fieldset.button button {
+  width: 100%;
+
+  border: none;
+  border-radius: 3px;
+
+  background-color: #5865f2;
+  color: #fff;
+
+  font-weight: 500;
+
+  padding: 15px;
+}
+
 .tickets > main form > ul fieldset.personal {
   display: grid;
   grid-template-columns: 49% 49%;
@@ -294,14 +322,16 @@ table {
   column-gap: 1%
 }
 
-.tickets > main form > ul fieldset.envío > div.direccion {
+.tickets > main form > ul fieldset.envio {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 10% 10%;
 }
 
-.tickets > main form > ul fieldset.envío input#direccion {
-  width: 100%;
+.tickets > main form > ul fieldset.envio > div {
+  display: grid;
+  grid-template-columns: 33% 32% 33%;
+  column-gap: 1%;
 }
 
 .tickets > main form > ul fieldset.personal > div > input {
