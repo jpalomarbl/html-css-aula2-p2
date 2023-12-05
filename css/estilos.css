@@ -132,21 +132,22 @@ header a.selected {
 }
 
 .index > main > h1 {
-  font-size: 6rem;
+  color: #fff;
+  font-size: 4rem;
   font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 /* OTHER CONTENT */
 /* Content containers */
-.info > main,
-.calendario > main {
+main {
   margin-top: 20px;
 
   color: #070e58;
 }
 
 .info > main > section.info-grupos,
-.calendario > main > section.texto {
+main > section.texto {
   margin: 0 25vw;
 }
 
@@ -156,6 +157,10 @@ header a.selected {
 
 .calendario > main > section.tabla {
   margin: 5vh 15vw 10vh 15vw;
+}
+
+.tickets > main > section.form {
+  margin: 5vh 23vw;
 }
 
 /* Text headers */
@@ -201,13 +206,17 @@ header a.selected {
   font-weight: 700;
 }
 
+.tickets > main ul {
+  list-style: none;
+  padding: 0;
+}
+
 /* Text */
 .info > main > section.cabezas-cartel p {
   margin: 2px;
 }
 
-.info > main p,
-.calendario > main p,
+main p,
 .calendario > main table,
 .calendario > main table th:not([scope="col"]) {
   text-align: left;
@@ -263,6 +272,72 @@ table {
   padding-top: 10px;
 }
 
+/* Forms */
+.tickets > main form > ul fieldset {
+  background-color: rgb(88, 101, 242, 0.3);
+  border: none;
+  border-radius: 3px;
+
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.tickets > main form > ul fieldset.personal {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  column-gap: 2%;
+}
+
+.tickets > main form > ul fieldset.tarjeta {
+  display: grid;
+  grid-template-columns: 39% 29% 30%;
+  column-gap: 1%
+}
+
+.tickets > main form > ul fieldset.envío > div.direccion {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 10%;
+}
+
+.tickets > main form > ul fieldset.envío input#direccion {
+  width: 100%;
+}
+
+.tickets > main form > ul fieldset.personal > div > input {
+  width: 100%;
+}
+
+.tickets > main form > ul fieldset legend {
+  font-weight: 700;
+  font-size: 1.1rem;
+
+  margin-bottom: 10px;
+}
+
+.tickets > main form > ul fieldset label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.tickets > main form > ul fieldset span.obligatorio {
+  font-size: 1rem;
+  color: red;
+  margin-left: 5px;
+}
+
+.tickets > main form > ul fieldset input,
+.tickets > main form > ul fieldset select {
+  font-weight: 300;
+  font-size: 0.7rem;
+
+  border: none;
+  border-radius: 3px;
+
+  margin: 10px 0;
+  padding: 5px;
+}
+
 /* Footer */
 footer {
   display: block;
@@ -308,6 +383,7 @@ footer > ul > li {
 
 footer.index-footer > ul > li {
   margin: 10px 15px;
+  font-size: 1.2rem;
 }
 
 footer > p {
@@ -318,12 +394,12 @@ footer > p {
 
 footer.index-footer > p {
   margin: auto;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 /* Media queries */
-@media screen and (min-width: 1840px) {
+@media screen and (min-width: 1480px) {
   footer.index-footer {
     background-color: rgba(7, 14, 88, 0.7);
   }

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon" />
+    <title>Amped Festival</title>
+</head>
+
+<body class="tickets">
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo" tabindex="0"><img src="img/logo.svg" alt="Logo" /></a>
+            <ul>
+                <li>
+                    <a href="info.html" tabindex="0">Información</a>
+                </li>
+                <li><a href="calendario.html" tabindex="0">Calendario</a></li>
+                <li><a href="tickets.html" class="selected" tabindex="0">Entradas</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="texto">
+            <h1>Compra tus entradas</h1>
+
+            <p>
+                Ser parte del Amped Festival es una experiencia que no querrás perderte. Ya sea que
+                desees estar en primera fila o disfrutar del ambiente desde un espacio VIP, tenemos
+                diferentes tipos de entradas para satisfacer tus necesidades. Completa el formulario a
+                continuación para asegurarte de estar presente en este evento musical inigualable
+            </p>
+        </section>
+
+        <section class="form">
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li>
+                        <fieldset class="personal">
+                            <legend>Información Personal</legend>
+                            <label for="nombre">Nombre:<span class="obligatorio">*</span></label>
+                            <label for="apellidos">Apellidos:<span class="obligatorio">*</span></label>
+
+                            <input type="text" id="nombre" name="user_nombre" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]"
+                                minlength="3" maxlength="64" /> <input type="text" id="apellidos" name="user_apellidos"
+                                required pattern="[A-Za-zÀ-ÖØ-öø-ÿ' -]" minlength="2" maxlength="128" />
+
+                            <label for="email">Correo Electrónico:<span class="obligatorio">*</span></label>
+                            <label for="telefono">Teléfono:</label>
+
+                            <input type="text" id="email" name="user_email" required />
+
+                            <input type="text" id="telefono" name="user_telefono" />
+
+                            <div>
+                                <label for="fecha">Fecha de Nacimiento:<span class="obligatorio">*</span></label>
+                                <br>
+                                <input type="date" id="fecha" name="user_fecha" required />
+
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Tipo de Entrada</legend>
+                            <p>
+                                Elige el tipo de entrada que prefieres para tu experiencia en el Amped Festival. Cada
+                                opción ha sido diseñada para proporcionarte el mejor acceso y comodidades durante
+                                el evento.
+                            </p>
+                            <label for="mail">Selecciona tu entrada:</label>
+                            <select name="entradas" id="entradas">
+                                <option value="50">Entrada General - 50€</option>
+                                <option value="150">Entrada VIP - 150€ (incluye acceso backstage y zona preferencial)
+                                </option>
+                                <option value="120">Pase dos Días - 120€</option>
+                            </select>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Método de Pago</legend>
+                            <div>
+                                <input type="radio" id="paypal" name="pago" value="paypal" checked />
+                                <label for="paypal">Paypal</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="tarjeta" name="pago" value="tarjeta" />
+                                <label for="tarjeta">Tarjeta de crédito</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="bizum" name="pago" value="bizum" />
+                                <label for="bizum">Bizum</label>
+                            </div>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset class="tarjeta">
+                            <legend>Información de la Tarjeta</legend>
+
+                            <label for="ntarjeta">Número de tarjeta de crédito/débito:</label>
+                            <label for="ftarjeta">Fecha de Expiración:</label>
+                            <label for="cvctarjeta">CVC:</label>
+
+                            <input type="text" id="ntarjeta" name="user_ntarjeta" minlength="16" maxlength="16" />
+                            <input type="text" id="ftarjeta" name="user_ftarjeta" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" />
+                            <input type="text" id="cvctarjeta" name="user_cvctarjeta" minlength="3" maxlength="3" />
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset class="envio">
+                            <legend>Dirección de Envío</legend>
+                            <div class="direccion">
+                                <label for="direccion">Dirección:<span class="obligatorio">*</span></label>
+                                <br><input type="text" id="direccion" name="user_direccion" required />
+
+                            </div>
+                            <label for="poblacion">Población:<span class="obligatorio">*</span></label>
+                            <input type="text" id="poblacion" name="user_poblacion" required />
+
+                            <label for="cp">Código Postal:<span class="obligatorio">*</span></label>
+                            <input type="text" id="cp" name="user_poblacion" required />
+
+                            <label for="cp">Código Postal:<span class="obligatorio">*</span></label>
+                            <select name="entradas" id="entradas">
+                                <option value="españa">España</option>
+                                <option value="francia">Francia</option>
+                                <option value="reino-unido">Reino Unido</option>
+                            </select>
+                        </fieldset>
+                    </li>
+
+                    <li>
+                        <fieldset>
+                            <legend>Comentarios o Peticiones Especiales</legend>
+                            <input type="textarea">
+                        </fieldset>
+                    </li>
+
+                    <li>
+                        <fieldset>
+                            <input type="checkbox" name="terminos-condiciones" id="">
+                            <label>He leído y acepto los <a href="">Términos y condiciones</a> y la <a href="">política
+                                    de privacidad</a><span class="obligatorio">*</span></label>
+                        </fieldset>
+                    </li>
+
+                    <li>
+                        <fieldset>
+                            <button>Comprar Entrada</button>
+                        </fieldset>
+                    </li>
+                </ul>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="" tabindex="0">Aviso legal</a></li>
+            <li><a href="" tabindex="0">Política de privacidad</a></li>
+            <li><a href="" tabindex="0">Política de cookies</a></li>
+        </ul>
+        <p>
+            2023 © Jaime Simeón Palomar Blumenthal. Foto creada por
+            <a href="https://www.midjourney.com/home" tabindex="0">Midjourney</a>
+        </p>
+    </footer>
+</body>
+
+</html>
